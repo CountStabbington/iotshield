@@ -205,10 +205,27 @@ blockquote {
 }
 
 button {
-    border: 0;
-    margin: 0;
-    padding: 0;
+    padding: 0.5rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
 }
 
 .full {

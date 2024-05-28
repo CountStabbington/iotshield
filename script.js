@@ -41,5 +41,41 @@ function displayDevices(filteredDevices) {
     });
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const loginForm = document.getElementById('login-form');
+    const registerForm = document.getElementById('register-form');
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.email.value;
+            const password = e.target.password.value;
+
+            // Lógica de inicio de sesión
+            console.log(`Iniciando sesión con correo: ${email} y contraseña: ${password}`);
+            alert('Inicio de sesión exitoso.');
+        });
+    }
+
+    if (registerForm) {
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = e.target.name.value;
+            const email = e.target.email.value;
+            const password = e.target.password.value;
+            const confirmPassword = e.target['confirm-password'].value;
+
+            if (password !== confirmPassword) {
+                alert('Las contraseñas no coinciden.');
+                return;
+            }
+
+            // Lógica de registro
+            console.log(`Registrando usuario: ${name} con correo: ${email}`);
+            alert('Registro exitoso.');
+        });
+    }
+});
+
 // Display all devices initially
 displayDevices(devices);
