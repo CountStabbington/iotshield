@@ -29,8 +29,17 @@ main {
 
 .deviceCard {
     border: 1px solid #ccc;
-    padding: 10px;
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+}
+
+.deviceImage {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 16px;
 }
 
 .deviceCard h2 {
@@ -39,4 +48,17 @@ main {
 
 .deviceCard p {
     margin: 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

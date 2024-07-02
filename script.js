@@ -1,8 +1,9 @@
 // Sample IoT devices data
 const devices = [
-    { name: "Smartwatch 1", type: "smartwatch", subscription: "free" },
-    { name: "Refrigerador 1", type: "refrigerator", subscription: "premium" },
-    { name: "Smart Thermostat 1", type: "smartthermostat", subscription: "free" },
+    { name: "Reloj Inteligente", type: "smartwatch", subscription: "free", image: "images/reloj_inteligente.jpg", guideLink: "guide_smartwatch.html" },
+    { name: "Refrigerador", type: "refrigerator", subscription: "premium", image: "images/refrigerador_inteligente.jpg", guideLink: "guide_refrigerator.html" },
+    { name: "Termostato Inteligente", type: "smartthermostat", subscription: "free", image: "images/termostato_inteligente.jpg", guideLink: "guide_smart_thermostat.html" },
+    { name: "Steren LED WI-FI RGB+W multicolor de 10 w", type: "focos", subscription: "free", image: "images/steren_led.jpg", guideLink: "guias/guia_steren_led.html" },
     // Add more devices as needed
 ];
 
@@ -32,9 +33,11 @@ function displayDevices(filteredDevices) {
         deviceCard.classList.add("deviceCard");
 
         deviceCard.innerHTML = `
+            <img src="${device.image}" alt="${device.name}" class="deviceImage">
             <h2>${device.name}</h2>
             <p>Type: ${device.type}</p>
             <p>Subscription: ${device.subscription}</p>
+            <button onclick="window.location.href='${device.guideLink}'">Ver Guía</button>
         `;
 
         deviceListContainer.appendChild(deviceCard);
